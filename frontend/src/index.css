@@ -1,0 +1,386 @@
+/* ==========================================================================
+   PAYTOBRO — BALANCED COMPACT FINTECH SAAS TYPOGRAPHY (SWEET SPOT)
+   Clearly readable, compact Redux-style density (13px body, 12-13px tables/nav, 22px titles)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Screen 22 Dark Palette */
+  --bg-app: #06080D;
+  --bg-sidebar: #080B11;
+  --bg-surface: #0C1017;
+  --bg-surface-elevated: #101520;
+  --bg-surface-hover: #141B28;
+  --bg-surface-active: #182233;
+
+  /* Master Emerald & Lime Green Accents */
+  --emerald-primary: #10B981;
+  --emerald-btn: #059669;
+  --emerald-btn-hover: #10B981;
+  --emerald-pill-bg: #0B2218;
+  --emerald-pill-border: #10B981;
+  --lime-accent: #84CC16;
+
+  /* Status Colors */
+  --color-pending: #F59E0B;
+  --color-pending-bg: rgba(245, 158, 11, 0.14);
+  --color-pending-border: rgba(245, 158, 11, 0.32);
+  --color-recovered: #10B981;
+  --color-failed: #EF4444;
+
+  /* Typography Colors */
+  --text-white: #FFFFFF;
+  --text-primary: #F1F5F9;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --text-dim: #475569;
+
+  /* Borders & Dividers */
+  --border-subtle: #141B27;
+  --border-card: #18202D;
+  --border-card-hover: #232E40;
+
+  /* Dimensions - Compact Redux SaaS */
+  --sidebar-width: 226px;
+  --header-height: 56px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+  /* Fonts */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+
+  /* Transitions */
+  --transition-fast: 120ms ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background-color: var(--bg-app) !important;
+  text-align: left !important;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  font-size: 13px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Master Layout */
+.app-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: var(--bg-app);
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: var(--bg-app);
+}
+
+/* Screen 22 Dashboard Container - Compact Padding */
+.screen22-dashboard {
+  padding: 16px 22px 28px;
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+/* Page Container for subpages */
+.page-container {
+  padding: 16px 22px 28px;
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Screen 22 Card */
+.s22-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 14px 16px;
+  transition: border-color var(--transition-fast);
+}
+.s22-card:hover {
+  border-color: var(--border-card-hover);
+}
+
+/* Green Delta Pill */
+.delta-pill-green {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #34D399;
+  background-color: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: var(--radius-sm);
+  padding: 1.5px 6px;
+  line-height: 1.2;
+}
+
+/* Icon Badges for KPIs */
+.kpi-icon-circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kpi-icon-red {
+  background-color: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: #EF4444;
+}
+
+.kpi-icon-amber {
+  background-color: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  color: #F59E0B;
+}
+
+.kpi-icon-green {
+  background-color: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: #10B981;
+}
+
+.kpi-icon-blue {
+  background-color: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: #38BDF8;
+}
+
+/* Emerald Primary Action Button */
+.btn-emerald {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 13px;
+  border-radius: var(--radius-sm);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #059669;
+  color: #FFFFFF;
+  border: 1px solid #10B981;
+  transition: all var(--transition-fast);
+  font-family: var(--font-sans);
+}
+.btn-emerald:hover {
+  background-color: #10B981;
+}
+
+/* Dark Outlined Button */
+.btn-dark-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 12.5px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #0E131C;
+  color: var(--text-primary);
+  border: 1px solid var(--border-card);
+  transition: all var(--transition-fast);
+  font-family: var(--font-sans);
+}
+.btn-dark-outline:hover {
+  border-color: var(--border-card-hover);
+  background-color: #121824;
+}
+
+/* Table Analyze Button */
+.btn-analyze-green {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3.5px 11px;
+  border-radius: var(--radius-sm);
+  font-size: 11.5px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #0A1412;
+  color: #34D399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  transition: all var(--transition-fast);
+  font-family: var(--font-sans);
+}
+.btn-analyze-green:hover {
+  background-color: rgba(16, 185, 129, 0.15);
+  border-color: #10B981;
+}
+
+/* Status Badges */
+.status-pill-pending {
+  display: inline-flex;
+  align-items: center;
+  padding: 1.5px 7px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  background-color: var(--color-pending-bg);
+  color: #FBBF24;
+  border: 1px solid var(--color-pending-border);
+}
+
+.status-pill-recovered {
+  display: inline-flex;
+  align-items: center;
+  padding: 1.5px 7px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  background-color: rgba(16, 185, 129, 0.12);
+  color: #34D399;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+/* Screen 22 Data Table */
+.s22-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  text-align: left;
+}
+
+.s22-table th {
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 11px;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border-subtle);
+  letter-spacing: 0.02em;
+}
+
+.s22-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  vertical-align: middle;
+}
+
+.s22-table tbody tr:hover {
+  background-color: var(--bg-surface-hover);
+}
+
+/* Modals */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 7, 13, 0.85);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 16px;
+}
+
+.modal-content {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.8);
+  width: 100%;
+  max-width: 820px;
+  max-height: 92vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #18202D;
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #222C3D;
+}
+
+/* Animations */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0.4;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
